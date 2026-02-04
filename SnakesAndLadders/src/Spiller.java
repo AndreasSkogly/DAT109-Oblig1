@@ -3,17 +3,29 @@ public class Spiller {
     private String navn;
     private int posisjon;
     private boolean tur;
+    private boolean vinner;
 
-    public Spiller(String navn, int posisjon, boolean tur) {
+    public Spiller(String navn, int posisjon,boolean tur, boolean vinner) {
         this.navn = navn;
         this.posisjon = posisjon;
         this.tur = tur;
+        this.vinner = vinner;
     }
 
     public String getNavn() {
         return navn;
 
  }
+    public boolean getVinner(){
+        return vinner;
+    }
+
+    /**
+     * @setVinner --
+     */
+    public void setVinner(){
+        this.vinner = true;
+    }
 
     public boolean isTur() {
         return tur;
