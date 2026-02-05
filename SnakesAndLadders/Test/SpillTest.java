@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class SpillTest {
 
     private Spiller spiller;
@@ -42,7 +43,6 @@ public class SpillTest {
     }
     @Test
     void spillVinner(){
-        spiller.setNavn("Barketer Kristiansen");
         spiller.setPosisjon(100);
         spiller.setVinner();
         assertTrue(spiller.getVinner());

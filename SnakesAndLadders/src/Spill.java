@@ -3,7 +3,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 public class Spill {
+    /**
+     *
+     * starter spillet og oppretter noen spillere, lage brett(her kan man velge størrelse selv) og lager terning
+     */
     public static void main(String[] args) {
     Spill spill = new Spill();
     List<Spiller> spillere = new ArrayList<>(4);
@@ -14,16 +19,22 @@ public class Spill {
     Brett brett = new Brett(100);
     Terning terning = new Terning();
 
-
     spill.spillRunde(terning, brett, spillere);
     }
+    /**
+     * @param terning terningen som trilles for hver tur
+     * @param brett brettet spillet bruker
+     * @param spillere liste over spillere
+     */
 
     public void spillRunde(Terning terning, Brett brett, List<Spiller> spillere) {
         int hvemBegynner = (int) (Math.random() * spillere.size());
         Spiller spiller = spillere.get(hvemBegynner);
         spiller.setTur(true);
+        /**
+         * Spillets gang simuleres.
+         */
 
-        // Farger for å vise tydeligere i konsollen om spiller traff stige eller slange
         final String RED = "\u001B[31m";
         final String GREEN = "\u001B[32m";
         final String RESET = "\u001B[0m";
